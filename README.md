@@ -1,6 +1,6 @@
 ![Git&GitHub](img/git&github-guide.png)
 
-## [Wiki](https://github.com/princeelector/git-and-github-guide/wiki)
+## Check out [Wiki page](https://github.com/princeelector/git-and-github-guide/wiki) for more condensed sources plus some theory
 
 ## Table of contents
 
@@ -18,6 +18,7 @@
 - [Ignoring files](#ignoring-files)
 - [Committing guideline](#committing-guideline)
 - [Using GitHub](#using-github)
+- [Working in a Team](#working-in-a-team)
 
 # Git commands
 
@@ -129,8 +130,12 @@
 
 # Git workflow
 
+
+
 # Ignoring files
 
 # Committing guideline
 
 # Using GitHub
+
+# Working in a Team
