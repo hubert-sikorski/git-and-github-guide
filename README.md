@@ -21,6 +21,15 @@
   - [Gitflow](#gitflow)
   - [Forking workflow](#forking-workflow)
 - [Ignoring files](#ignoring-files)
+  - [Example of .gitignore file](#example-of-gitignore-file)
+  - [Files to ignore](#files-to-ignore)
+  - [How .gitignore works](#how-gitignore-works)
+    - [Literal File Names](#literal-file-names)
+    - [Directories](#directories)
+    - [Wildcard](#wildcard)
+    - [Negation](#negation)
+    - [Double Asterisk](#double-asterisk)
+    - [Comments](#comments)
 - [Committing guideline](#committing-guideline)
 - [Using GitHub](#using-github)
 - [Working in a Team](#working-in-a-team)
@@ -184,6 +193,7 @@ Your projects require more unit and integration tests, which are now counted in 
 Usually, you don’t run such tests on branches where features are developed.
 
 This can be resolved with Gitflow, which employs two parallel long-running branches:
+
 - Master
 - Develop
 
@@ -209,6 +219,139 @@ At its core forking is similar to feature branching, but instead of creating bra
 a fork of the repo is made, and instead of doing a merge request you create a pull request.
 
 # Ignoring files
+
+When you make commits in a git repository, you choose which files to stage and commit by
+using git add FILENAME and then git commit. But what if there are some files that you never
+want to commit? It's too easy to accidentally commit them (especially if you use `git add .`
+to stage all files in the current directory). That's where a `.gitignore` file comes in handy.
+It lets Git know that it should ignore certain files and not track them.
+
+Create a .gitignore file for your repository:
+
+```console
+touch .gitignore
+```
+
+If you want to ignore a file that is already checked in, you must untrack the file before you
+add a rule to ignore it. From your terminal, untrack the file:
+
+```console
+git rm --cached FILENAME
+```
+
+## Example of .gitignore file
+
+```bash
+# Ignore the node_modules directory
+node_modules/
+
+# Ignore Logs
+logs
+*.log
+
+# Ignore the build directory
+/build
+
+# The file containing environment variables
+.env
+
+# Ignore IDE specific files
+.idea/
+.vscode/
+*.sw*
+```
+
+## Files to ignore
+
+- Runtime files such as log, lock, cache, or temporary files
+- Personal IDE config files
+- Dependencies which can be downloaded from a package manager (e.g. node_modules)
+- Files with API keys/secrets, credentials, or sensitive information
+- Useless system files like .DS_Store on macOS
+- Generated files like build folder
+- Compiled code such as .o, .pyc, and .class files
+- And there might be other files you would want to keep private (.txt or todo.md files)
+
+You can get basic idea for what sort of files to ignore on `gitignore.io`, by selecting your
+operating system, text editor or IDE, languages, and frameworks.
+
+## How .gitignore works
+
+A .gitignore file is a plain text file where each line contains a pattern for files/directories
+to ignore. Generally, this is placed in the root folder of the repository. However, you can put it
+in any folder in the repository and you can also have multiple .gitignore files. The patterns
+in the files are relative to the location of that .gitignore file.
+
+### Literal File Names
+
+The easiest pattern is a literal file name, for example:
+
+```bash
+.DS_Store
+```
+
+This will ignore any files named `.DS_Store`, which is a common file on macOS.
+
+### Directories
+
+You can ignore entire directories, just by including their paths and putting a `/` on the end:
+
+```bash
+node_modules/
+logs/
+```
+
+If you leave the slash off of the end, it will match both files and directories with that name.
+
+### Wildcard
+
+The `*` matches 0 or more characters (except the `/`). So, for example, `*.log` matches any file
+ending with the `.log` extension.
+
+Another example is `*~`, which matches any file ending with `~`, such as `index.html~`
+
+You can also use the `?`, which matches any one character except for the `/`.
+
+### Negation
+
+You can use a prefix of `!` to negate a file that would be ignored.
+
+```bash
+*.log
+!example.log
+```
+
+In this example, `example.log` is not ignored, even though all other files ending with `.log` are ignored.
+
+But be aware, you can't negate a file inside of an ignored directory:
+
+```bash
+logs/
+!logs/example.log
+```
+
+Due to performance reasons, git will still ignore `logs/example.log` here because the entire `logs`
+directory is ignored.
+
+### Double Asterisk
+
+`**` can be used to match any number of directories.
+
+- `**/logs` matches all files or directories named logs (same as the pattern `logs`)
+- `**/logs/*.log` matches all files ending with `.log` in a logs directory
+- `logs/**/*.log` matches all files ending with `.log` in the logs directory and any of its subdirectories
+
+`**` can also be used to match all files inside of a directory, so for example `logs/**` matches all
+files inside of logs.
+
+### Comments
+
+Any lines that start with `#` are comments:
+
+```bash
+# macOS Files
+.DS_Store
+```
 
 # Committing guideline
 
