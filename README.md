@@ -31,6 +31,13 @@
     - [Double Asterisk](#double-asterisk)
     - [Comments](#comments)
 - [Committing guideline](#committing-guideline)
+  - [Staging and commiting](#staging-and-commiting)
+  - [Committing best practices](#committing-best-practices)
+    - [Make clean, single-purpose commits](#make-clean-single-purpose-commits)
+    - [Write good commit messages](#write-good-commit-messages)
+    - [Don't commit half-done work](#dont-commit-half-done-work)
+    - [Test before you commit](#test-before-you-commit)
+  - [Use Branches](#use-branches)
 - [Using GitHub](#using-github)
 - [Working in a Team](#working-in-a-team)
 
@@ -354,6 +361,93 @@ Any lines that start with `#` are comments:
 ```
 
 # Committing guideline
+
+In Git, commit is the term used for saving changes. Git does not add changes to a commit automatically.
+You need to indicate which file and changes need to be saved before running the Git commit command.
+The commit command does not save changes in remote servers, only in the local repository of Git.
+
+## Staging and commiting
+
+![Working tree](img/working-tree.png)
+
+- You make changes to a file in the working directory.
+- You use the `git add` command to move those changes from the working directory to the staging area.
+- Git does not save changes yet. You need to run the `git commit` command to move changes from the
+staging area to the local repository
+- Local repository is updated, but if you want to update your remote repository, you need to `git push` it
+
+## Committing best practices
+
+Whether our code will be seen by the entire dev team, open source community or just future versions of
+ourselves, either one will be grateful if we commit responsibly today. Time to forget about running
+`git commit -m 'Fix bug'` ever again.
+
+### Make clean, single-purpose commits
+
+Let’s say you have two bugs that you just fixed. Each bug fix should produce a separate commit.
+By doing that you are creating an organized log of commits, which makes it easy for other developers
+to read and maintain the code base. It is a good practice to push code more often and not end up with
+a messy repo. Make small commits more frequently and avoid committing large chunks of code.
+This makes it easy to glance through the commit history and find what you are looking for.
+It is recommended that the use of git add . and git add -A should be in moderation and instead
+the focus should be on making frequent, but meaningful commits. On the other hand, commits which introduce
+super small changes such as fixing typos in commit messages should be fixed with commands like
+`git commit --amend` and not made into separate commit.
+
+### Write good commit messages
+
+Your commit log should tell a story. Therefore, Writing descriptive commit messages keeps your
+repository well managed and makes it easy to navigate through your commit log. Your commit message
+should be short, in present tense and explicitly say why you made the change.
+
+It’s time to stop using bad commit messages like:
+
+- "fixed a bug" :red_circle:
+- "changed a few things" :red_circle:
+- "removing method" :red_circle:
+- "more code refactoring" :red_circle:
+
+Use the `Imperative mood` instead of past tense style. Writing in the present tense tells someone what
+applying the commit will do, rather than what you did. It may feel awkward at first to use the
+imperative style and sometimes it can even be a bit awkward. In his article “How to Write a Git Commit Message”,
+Chris Beams explains how to easily apply the imperative style:
+
+> “A properly formed Git commit subject line should always be able to complete the following sentence:
+> If applied, this commit will your subject line here ”
+
+If we apply this rule to the bad examples mentioned above, the result will look like this:
+
+- If applied, this commit will `fix an X bug to enable Y` :heavy_check_mark:
+- if applied, this commit will `remove X method in Y` :heavy_check_mark:
+- if applied, this commit will `refactor markup for X` :heavy_check_mark:
+- if applied, this commit will `update content in X section/s` :heavy_check_mark:
+
+The most important part of a commit message is that it should be clear and meaningful.
+In the long run, writing good commit messages shows how much of a collaborator you are.
+The benefits of writing good commit messages are not only limited to your team,
+but indeed expand to yourself and future contributors.
+
+### Don't commit half-done work
+
+You should only commit code when it’s completed. This doesn’t mean you have to complete a whole,
+large feature before committing. Quite the contrary: split the feature’s implementation into logical
+chunks and remember to commit early and often. But don’t commit just to have something in the repository
+before leaving the office at the end of the day. If you’re tempted to commit just because you need a clean
+working copy (to check out a branch, pull in changes, etc.) consider using `git stash` feature instead.
+
+### Test before you commit
+
+Resist the temptation to commit something that you “think” is completed. Test it thoroughly
+to make sure it really is completed and has no side effects (as far as one can tell).
+While committing half-baked things in your local repository only requires you to forgive yourself,
+having your code tested is even more important when it comes to pushing / sharing your code with others.
+
+## Use Branches
+
+Branching is one of Git’s most powerful features – and this is not by accident: quick and easy branching
+was a central requirement from day one. Branches are the perfect tool to help you avoid mixing up different
+lines of development. You should use branches extensively in your development workflows: for new features,
+bug fixes, experiments, ideas…
 
 # Using GitHub
 
