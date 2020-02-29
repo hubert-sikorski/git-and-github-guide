@@ -218,7 +218,7 @@ to anyone who’d like to change or improve its code.
 
 This problem is solved by forks: any time a developer wants to change something in
 an open source project, they don’t clone the official repo directly. Instead, they
-`fork` it to create a copy. When the work is finished, they make a pull request so
+`Fork` it to create a copy. When the work is finished, they make a pull request so
 that the owner of the repository can review the changes and decide whether to merge
 them to his project.
 
@@ -279,8 +279,8 @@ logs
 - Compiled code such as .o, .pyc, and .class files
 - And there might be other files you would want to keep private (.txt or todo.md files)
 
-You can get basic idea for what sort of files to ignore on `gitignore.io`, by selecting your
-operating system, text editor or IDE, languages, and frameworks.
+You can get basic idea for what sort of files to ignore on [gitignore.io](https://gitignore.io),
+by selecting your operating system, text editor or IDE, languages, and frameworks.
 
 ## How .gitignore works
 
@@ -380,7 +380,7 @@ staging area to the local repository
 
 Whether our code will be seen by the entire dev team, open source community or just future versions of
 ourselves, either one will be grateful if we commit responsibly today. Time to forget about running
-`git commit -m 'Fix bug'` ever again.
+~~git commit -m 'Fix bug'~~ ever again.
 
 ### Make clean, single-purpose commits
 
@@ -402,10 +402,10 @@ should be short, in present tense and explicitly say why you made the change.
 
 It’s time to stop using bad commit messages like:
 
-- "fixed a bug" :red_circle:
-- "changed a few things" :red_circle:
-- "removing method" :red_circle:
-- "more code refactoring" :red_circle:
+- "fixed a bug" :x:
+- "changed a few things" :x:
+- "removing method" :x:
+- "more code refactoring" :x:
 
 Use the `Imperative mood` instead of past tense style. Writing in the present tense tells someone what
 applying the commit will do, rather than what you did. It may feel awkward at first to use the
@@ -417,10 +417,10 @@ Chris Beams explains how to easily apply the imperative style:
 
 If we apply this rule to the bad examples mentioned above, the result will look like this:
 
-- If applied, this commit will `fix an X bug to enable Y` :heavy_check_mark:
-- if applied, this commit will `remove X method in Y` :heavy_check_mark:
-- if applied, this commit will `refactor markup for X` :heavy_check_mark:
-- if applied, this commit will `update content in X section/s` :heavy_check_mark:
+- If applied, this commit will -> "fix an X bug to enable Y" :heavy_check_mark:
+- if applied, this commit will -> "remove X method in Y" :heavy_check_mark:
+- if applied, this commit will -> "refactor markup for X" :heavy_check_mark:
+- if applied, this commit will -> "update content in X section/s" :heavy_check_mark:
 
 The most important part of a commit message is that it should be clear and meaningful.
 In the long run, writing good commit messages shows how much of a collaborator you are.
