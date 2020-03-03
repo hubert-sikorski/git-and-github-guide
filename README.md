@@ -184,6 +184,7 @@ and position. In bigger teams, however, there’s always some form of hierarchy 
 In this case, you can employ merge requests and push permissions.
 
 Before a branch is merged to master, it needs to be verified and checked for errors.
+
 Junior developers can create a **pull/merge request** and assign it to one of the Seniors, so
 they can review the code and leave comments. If everything’s okay, the request is
 accepted and the branch is merged.
@@ -212,12 +213,14 @@ it can be merged to the Master.
 ## Forking workflow
 
 In **open source** projects it is the owner of the repository who decides who can push to the repo.
+
 However, the idea of open source is that everybody can contribute to the project. Still,
 it’s hard to think of Linus Torvalds giving unlimited repository access to the Linux project
 to anyone who’d like to change or improve its code.
 
 This problem is solved by forks: any time a developer wants to change something in
 an open source project, they don’t clone the official repo directly. Instead, they
+
 **Fork** it to create a copy. When the work is finished, they make a pull request so
 that the owner of the repository can review the changes and decide whether to merge
 them to his project.
@@ -297,7 +300,7 @@ The easiest pattern is a literal file name, for example:
 .DS_Store
 ```
 
-This will ignore any files named `.DS_Store`, which is a common file on macOS.
+This will ignore any files named `.DS_Store` which is a common file on macOS.
 
 ### Directories
 
@@ -372,8 +375,7 @@ The commit command does not save changes in remote servers, only in the local re
 
 - You make changes to a file in the **working directory**.
 - You use the `git add` command to move those changes from the working directory to the **staging area**.
-- Git does not save changes yet. You need to run the `git commit` command to move changes from the
-staging area to the **local repository**
+- Git does not save changes yet. You need to run the `git commit` command to move changes from thestaging area to the **local repository**
 - Local repository is updated, but if you want to update your **remote repository**, you need to `git push` it
 
 ## Committing best practices
