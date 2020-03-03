@@ -61,11 +61,11 @@
 
 - `git log` - Show the commit history for the currently active branch.
 
-- `git log branchB..branchA` - Show the commits on branchA that are not on branchB.
+- `git log branchB..branchA` - Show the commits on *branchA* that are not on *branchB*.
 
 - `git log --follow [file]` - Show the commits that changed file, even across renames.
 
-- `git diff branchB..branchA` - Show difference of what is in branchA that is not in branchB.
+- `git diff branchB..branchA` - Show difference of what is in *branchA* that is not in *branchB*.
 
 - `git show [SHA]` - Show any object in Git in human-readable format.
 
@@ -106,7 +106,7 @@
 - `git checkout [branch_name]` - Switch to another branch and check it out into your working directory.
   Use `-b` flag to create and check out a new branch.
 
-- `git branch -d [branch_name]` - Delete branch.
+- `git branch -d [branch_name]` - Delete a branch.
 
 - `git merge [branch]` - Merge the specified branch's history into the current one.
 
@@ -114,7 +114,7 @@
 
 ## Remote Repositories
 
-- `git remote add [remote_alias] [url]` - add a git URL as an alias.
+- `git remote add [remote_alias] [url]` - connect your local repository to a remote repository.
 
 - `git fetch [remote_alias]` - fetch down all the branches from that Git remote.
 
@@ -184,7 +184,7 @@ and position. In bigger teams, however, there’s always some form of hierarchy 
 In this case, you can employ merge requests and push permissions.
 
 Before a branch is merged to master, it needs to be verified and checked for errors.
-Junior developers can create a merge request and assign it to one of the Seniors, so
+Junior developers can create a *pull/merge request* and assign it to one of the Seniors, so
 they can review the code and leave comments. If everything’s okay, the request is
 accepted and the branch is merged.
 
@@ -204,21 +204,21 @@ This can be resolved with Gitflow, which employs two parallel long-running branc
 - Master
 - Develop
 
-`“Master”` is always ready to be released on LIVE, with everything fully tested and approved
-(production-ready). `“Develop”` is the branch to which all feature branches are merged and
+*“Master”* is always ready to be released on LIVE, with everything fully tested and approved
+(production-ready). *“Develop”* is the branch to which all feature branches are merged and
 where all tests are performed. Only when everything’s been thoroughly checked and fixed
 it can be merged to the Master.
 
 ## Forking workflow
 
-In open source projects it is the owner of the repository who decides who can push to the repo.
+In *open source* projects it is the owner of the repository who decides who can push to the repo.
 However, the idea of open source is that everybody can contribute to the project. Still,
 it’s hard to think of Linus Torvalds giving unlimited repository access to the Linux project
 to anyone who’d like to change or improve its code.
 
 This problem is solved by forks: any time a developer wants to change something in
 an open source project, they don’t clone the official repo directly. Instead, they
-`Fork` it to create a copy. When the work is finished, they make a pull request so
+*Fork* it to create a copy. When the work is finished, they make a pull request so
 that the owner of the repository can review the changes and decide whether to merge
 them to his project.
 
@@ -228,19 +228,19 @@ a fork of the repo is made, and instead of doing a merge request you create a pu
 # Ignoring files
 
 When you make commits in a git repository, you choose which files to stage and commit by
-using git add FILENAME and then git commit. But what if there are some files that you never
+using git add FILENAME and then `git commit`. But what if there are some files that you never
 want to commit? It's too easy to accidentally commit them (especially if you use `git add .`
-to stage all files in the current directory). That's where a `.gitignore` file comes in handy.
+to stage all files in the current directory). That's where a *.gitignore* file comes in handy.
 It lets Git know that it should ignore certain files and not track them.
 
-Create a .gitignore file for your repository:
+Create a *.gitignore* file for your repository:
 
 ```console
 touch .gitignore
 ```
 
-If you want to ignore a file that is already checked in, you must untrack the file before you
-add a rule to ignore it. From your terminal, untrack the file:
+If you want to ignore a file that is already checked in, you must *untrack* the file before you
+add a rule to ignore it. From your terminal, *untrack* the file:
 
 ```console
 git rm --cached FILENAME
@@ -270,24 +270,24 @@ logs
 
 ## Files to ignore
 
-- Runtime files such as log, lock, cache, or temporary files
-- Personal IDE config files
-- Dependencies which can be downloaded from a package manager (e.g. node_modules)
+- Runtime files such as *log*, *lock*, *cache*, or temporary files
+- Personal IDE *config* files
+- Dependencies which can be downloaded from a package manager (e.g. *node_modules*)
 - Files with API keys/secrets, credentials, or sensitive information
-- Useless system files like .DS_Store on macOS
-- Generated files like build folder
-- Compiled code such as .o, .pyc, and .class files
-- And there might be other files you would want to keep private (.txt or todo.md files)
+- Useless system files like *.DS_Store* on macOS
+- Generated files like *build* folder
+- Compiled code such as *.o*, *.pyc*, and *.class* files
+- And there might be other files you would want to keep private (*.txt* or *todo.md* files)
 
 You can get basic idea for what sort of files to ignore on [gitignore.io](https://gitignore.io),
 by selecting your operating system, text editor or IDE, languages, and frameworks.
 
 ## How .gitignore works
 
-A .gitignore file is a plain text file where each line contains a pattern for files/directories
+A *.gitignore* file is a plain text file where each line contains a pattern for files/directories
 to ignore. Generally, this is placed in the root folder of the repository. However, you can put it
-in any folder in the repository and you can also have multiple .gitignore files. The patterns
-in the files are relative to the location of that .gitignore file.
+in any folder in the repository and you can also have multiple *.gitignore* files. The patterns
+in the files are relative to the location of that *.gitignore* file.
 
 ### Literal File Names
 
@@ -297,7 +297,7 @@ The easiest pattern is a literal file name, for example:
 .DS_Store
 ```
 
-This will ignore any files named `.DS_Store`, which is a common file on macOS.
+This will ignore any files named `.DS_Store` which is a common file on macOS.
 
 ### Directories
 
@@ -370,11 +370,11 @@ The commit command does not save changes in remote servers, only in the local re
 
 ![Working tree](img/working-tree.png)
 
-- You make changes to a file in the working directory.
-- You use the `git add` command to move those changes from the working directory to the staging area.
+- You make changes to a file in the *working directory*.
+- You use the `git add` command to move those changes from the working directory to the *staging area*.
 - Git does not save changes yet. You need to run the `git commit` command to move changes from the
-staging area to the local repository
-- Local repository is updated, but if you want to update your remote repository, you need to `git push` it
+staging area to the *local repository*
+- Local repository is updated, but if you want to update your *remote repository*, you need to `git push` it
 
 ## Committing best practices
 
@@ -385,12 +385,12 @@ ourselves, either one will be grateful if we commit responsibly today. Time to f
 ### Make clean, single-purpose commits
 
 Let’s say you have two bugs that you just fixed. Each bug fix should produce a separate commit.
-By doing that you are creating an organized log of commits, which makes it easy for other developers
+By doing that you are creating an *organized log of commits*, which makes it easy for other developers
 to read and maintain the code base. It is a good practice to push code more often and not end up with
 a messy repo. Make small commits more frequently and avoid committing large chunks of code.
 This makes it easy to glance through the commit history and find what you are looking for.
 It is recommended that the use of git add . and git add -A should be in moderation and instead
-the focus should be on making frequent, but meaningful commits. On the other hand, commits which introduce
+the focus should be on making *frequent, but meaningful commits*. On the other hand, commits which introduce
 super small changes such as fixing typos in commit messages should be fixed with commands like
 `git commit --amend` and not made into separate commit.
 
@@ -407,8 +407,8 @@ It’s time to stop using bad commit messages like:
 - "removing method" :x:
 - "more code refactoring" :x:
 
-Use the `Imperative mood` instead of past tense style. Writing in the present tense tells someone what
-applying the commit will do, rather than what you did. It may feel awkward at first to use the
+Use the *Imperative mood* instead of past tense style. Writing in the present tense tells someone *what
+applying the commit will do*, rather than what you did. It may feel awkward at first to use the
 imperative style and sometimes it can even be a bit awkward. In his article “How to Write a Git Commit Message”,
 Chris Beams explains how to easily apply the imperative style:
 
@@ -444,7 +444,7 @@ having your code tested is even more important when it comes to pushing / sharin
 
 ## Use Branches
 
-Branching is one of Git’s most powerful features – and this is not by accident: quick and easy branching
+*Branching* is one of Git’s most powerful features – and this is not by accident: quick and easy branching
 was a central requirement from day one. Branches are the perfect tool to help you avoid mixing up different
 lines of development. You should use branches extensively in your development workflows: for new features,
 bug fixes, experiments, ideas…
