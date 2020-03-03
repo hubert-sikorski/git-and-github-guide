@@ -31,15 +31,22 @@
     - [Double Asterisk](#double-asterisk)
     - [Comments](#comments)
 - [Committing guideline](#committing-guideline)
+  - [Use Branches](#use-branches)
   - [Staging and commiting](#staging-and-commiting)
   - [Committing best practices](#committing-best-practices)
     - [Make clean, single-purpose commits](#make-clean-single-purpose-commits)
     - [Write good commit messages](#write-good-commit-messages)
     - [Don't commit half-done work](#dont-commit-half-done-work)
     - [Test before you commit](#test-before-you-commit)
-  - [Use Branches](#use-branches)
 - [Using GitHub](#using-github)
-- [Working in a Team](#working-in-a-team)
+  - [GitHub flow](#github-flow)
+    - [Create a branch](#create-a-branch)
+    - [Commit changes](#commit-changes)
+    - [Open a Pull Request](#open-a-pull-request)
+    - [Discuss and review your code](#discuss-and-review-your-code)
+    - [Merge](#merge)
+- [Markdown for README files](#markdown-for-readme-files)
+- [Other sources](#other-sources)
 
 # Git commands
 
@@ -369,6 +376,13 @@ In Git, commit is the term used for saving changes. Git does not add changes to 
 You need to indicate which file and changes need to be saved before running the Git commit command.
 The commit command does not save changes in remote servers, only in the local repository of Git.
 
+## Use Branches
+
+**Branching** is one of Git’s most powerful features – and this is not by accident: quick and easy branching
+was a central requirement from day one. Branches are the perfect tool to help you avoid mixing up different
+lines of development. You should use branches extensively in your development workflows: for new features,
+bug fixes, experiments, ideas…
+
 ## Staging and commiting
 
 ![Working tree](img/working-tree.png)
@@ -444,13 +458,73 @@ to make sure it really is completed and has no side effects (as far as one can t
 While committing half-baked things in your local repository only requires you to forgive yourself,
 having your code tested is even more important when it comes to pushing / sharing your code with others.
 
-## Use Branches
-
-**Branching** is one of Git’s most powerful features – and this is not by accident: quick and easy branching
-was a central requirement from day one. Branches are the perfect tool to help you avoid mixing up different
-lines of development. You should use branches extensively in your development workflows: for new features,
-bug fixes, experiments, ideas…
-
 # Using GitHub
 
-# Working in a Team
+GitHub is a Git hosting repository that provides developers with tools to ship better code through
+command line features, **issues** (threaded discussions), **pull requests**, **code review**, or the use of a
+collection of free and for-purchase apps in the GitHub Marketplace. With collaboration layers like
+the **GitHub flow**, and community of millions of developers, GitHub changes the way software is built.
+
+## GitHub flow
+
+GitHub builds collaboration directly into the development process. Work is organized into **repositories**,
+where developers can outline requirements or direction and **set expectations** for team members. Then,
+using the **GitHub flow**, which in its core is based on Git's [Gitflow](#gitflow) workflow,
+developers simply create a branch to work on updates, commit changes to save them, open a pull request
+to propose and discuss changes, and merge pull requests once everyone is on the same page.
+
+### Create a branch
+
+When you're working on a project, you're going to have a bunch of different **features** or ideas in progress
+at any given time – some of which are ready to go, and others which are not. **Branching** exists to help you
+manage this workflow.
+
+When you create a branch in your project, you're creating an *environment where you can try out new ideas*.
+Changes you make on a branch don't affect the `master` branch, so you're free to experiment and commit changes,
+safe in the knowledge that your branch won't be merged until it's ready to be reviewed by someone you're
+collaborating with.
+
+### Commit changes
+
+Once your branch has been created, it's time to start making changes. Whenever you **add**, **edit**, or **delete**
+a file, you're making a commit, and adding them to your branch. This process of adding commits **keeps track** of your
+progress as you work on a feature branch.
+
+Commits also create a **transparent history** of your work that others can follow to understand what you've done
+and why. Each commit has an associated commit message, which is a description explaining why a particular
+change was made. Furthermore, each commit is considered a separate unit of change. This lets you roll back
+changes if a bug is found, or if you decide to head in a different direction.
+
+### Open a Pull Request
+
+**Pull Requests** initiate discussion about your commits. Because they're tightly integrated with the underlying
+Git repository, anyone can see exactly what changes would be merged if they accept your request.
+
+You can open a Pull Request at any point during the development process: when you have little or no code but
+want to share some screenshots or general ideas, when you're stuck and need help or advice, or when you're ready
+for someone to review your work. By using GitHub's @mention system in your Pull Request message, you can ask
+for feedback from specific people or teams, whether they're down the hall or ten time zones away.
+
+### Discuss and review your code
+
+Once a Pull Request has been opened, the person or team reviewing your changes may have questions or comments.
+Perhaps the coding style doesn't match project guidelines, the change is missing unit tests, or maybe everything
+looks great and props are in order. Pull Requests are designed to encourage and capture this type of conversation.
+
+You can also continue to push to your branch in light of discussion and feedback about your commits.
+If someone comments that you forgot to do something or if there is a bug in the code, you can fix it in your
+branch and push up the change. GitHub will show your new commits and any additional feedback you may receive
+in the unified Pull Request view.
+
+### Merge
+
+Once your changes have been verified, it is time to merge your code into the master branch.
+Once merged, Pull Requests preserve a record of the historical changes to your code. Because
+they're searchable, they let anyone go back in time to understand why and how a decision was made.
+
+# Markdown for README files
+
+# Other sources
+
+- [Git](https://help.github.com/en/github/using-git)
+- [GitHub](https://help.github.com/en/github/using-git)
