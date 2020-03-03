@@ -1,4 +1,4 @@
-![Git&GitHub](img/git&github-guide.png)
+![Git&GitHub](img/intro/git&github-guide.png)
 
 ## Check out [Wiki page](https://github.com/princeelector/git-and-github-guide/wiki) for more condensed sources plus some theory
 
@@ -115,21 +115,23 @@
 
 - `git branch -d [branch_name]` - Delete a branch.
 
-- `git merge [branch]` - Merge the specified branch's history into the current one.
+- `git merge [branch_name]` - Merge the specified branch's history into the current one.
 
 - `git log` - Show all commits in the current branch's history.
 
 ## Remote Repositories
 
-- `git remote add [remote_alias] [url]` - connect your local repository to a remote repository.
+- `git remote add [remote_alias] [url]` - Connect your local repository to a remote repository.
 
-- `git fetch [remote_alias]` - fetch down all the branches from that Git remote.
+- `git fetch [remote_alias]` - Fetch down all the branches from that Git remote.
 
-- `git merge [remote_alias]/[branch]` - Merge a remote branch into your current branch to bring it up to date.
+- `git merge [remote_alias]/[branch_name]` - Merge a remote branch into your current branch to bring it up to date.
 
-- `git push [remote_alias] [branch]` - Transmit local branch commits to the remote repository branch.
+- `git push` - Transmit local branch commits to the remote repository branch.
 
-- `git push --force` - Overwrite remote repository with local working directory.
+- `git push -u [remote_alias] [branch_name]` - Transmit local, non-master branch commits to the remote repository branch. `-u` stands for `--set-upstream`. You can also use `origin` instead of `[remote_alias]`.
+
+- `git push --force` - Overwrite remote repository with local working directory. :warning: Command not recommended for beginners.
 
 - `git pull` - Fetch and merge any commits from the tracking remote branch.
 
@@ -138,7 +140,7 @@
 - `git commit --amend` - Replace the last commit with staged changes and last commit combined. Use with
   nothing staged to edit commit's message.
 
-- `git rebase [branch]` - Apply any commits of current branch ahead of specified one.
+- `git rebase [branch_name]` - Apply any commits of current branch ahead of specified one.
 
 - `git reset --hard [commit]` - Clear staging area, rewrite working tree from specified commit.
 
@@ -160,7 +162,7 @@
 
 ## Basic
 
-![Basic workflow](img/basic.png)
+![Basic workflow](img/git-workflow/basic.png)
 
 The most popular workflow among entry-level developers and in small projects.
 
@@ -170,7 +172,7 @@ for other developers to pull and use in their work.
 
 ## Feature Branch
 
-![Feature Branch](img/feature-branch.png)
+![Feature Branch](img/git-workflow/feature-branch.png)
 
 The basic workflow is great for developing a simple project. However, once two or more developers
 start working on separate functionalities within one project, problems begin to appear.
@@ -201,7 +203,7 @@ changes to specific branches in the repository, so you can keep full control ove
 
 ## Gitflow
 
-![Gitflow](img/gitflow.png)
+![Gitflow](img/git-workflow/gitflow.png)
 
 The bigger the project, the more control you need over what and when is released.
 Your projects require more unit and integration tests, which are now counted in hours.
@@ -385,7 +387,7 @@ bug fixes, experiments, ideas…
 
 ## Staging and commiting
 
-![Working tree](img/working-tree.png)
+![Working tree](img/committing-guideline/working-tree.png)
 
 - You make changes to a file in the **working directory**.
 - You use the `git add` command to move those changes from the working directory to the **staging area**.
@@ -396,7 +398,7 @@ bug fixes, experiments, ideas…
 
 Whether our code will be seen by the entire dev team, open source community or just future versions of
 ourselves, either one will be grateful if we commit responsibly today. Time to forget about running
-~~git commit -m 'Fix bug'~~ ever again.
+**~~git commit -m 'Fix bug'~~** ever again.
 
 ### Make clean, single-purpose commits
 
@@ -467,6 +469,8 @@ the **GitHub flow**, and community of millions of developers, GitHub changes the
 
 ## GitHub flow
 
+![GitHub flow](img/using-github/github-flow.png)
+
 GitHub builds collaboration directly into the development process. Work is organized into **repositories**,
 where developers can outline requirements or direction and **set expectations** for team members. Then,
 using the **GitHub flow**, which in its core is based on Git's [Gitflow](#gitflow) workflow,
@@ -484,6 +488,10 @@ Changes you make on a branch don't affect the `master` branch, so you're free to
 safe in the knowledge that your branch won't be merged until it's ready to be reviewed by someone you're
 collaborating with.
 
+```console
+git checkout -b [branch_name]
+```
+
 ### Commit changes
 
 Once your branch has been created, it's time to start making changes. Whenever you **add**, **edit**, or **delete**
@@ -495,7 +503,16 @@ and why. Each commit has an associated commit message, which is a description ex
 change was made. Furthermore, each commit is considered a separate unit of change. This lets you roll back
 changes if a bug is found, or if you decide to head in a different direction.
 
+```console
+git push -u origin [branch_name]
+```
+
 ### Open a Pull Request
+
+![GitHub flow](img/using-github/create-pr.gif)
+
+*Note:* After pushing local branch to the remote repository you may see that a `Compare & Pull request` button
+has automatically appeared on its main page. You can use it instead of creating a Pull Request manually.
 
 **Pull Requests** initiate discussion about your commits. Because they're tightly integrated with the underlying
 Git repository, anyone can see exactly what changes would be merged if they accept your request.
@@ -518,9 +535,13 @@ in the unified Pull Request view.
 
 ### Merge
 
+![Working tree](img/using-github/merge-branch.png)
+
 Once your changes have been verified, it is time to merge your code into the master branch.
 Once merged, Pull Requests preserve a record of the historical changes to your code. Because
 they're searchable, they let anyone go back in time to understand why and how a decision was made.
+
+![Working tree](img/using-github/delete-branch.png)
 
 # Markdown for README files
 
