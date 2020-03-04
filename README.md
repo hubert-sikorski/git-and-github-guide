@@ -46,6 +46,9 @@
     - [Discuss and review your code](#discuss-and-review-your-code)
     - [Merge](#merge)
   - [Issues](#issues)
+  - [Wiki](#wiki)
+    - [Adding content](#adding-content)
+    - [Adding pages](#adding-pages)
 - [Markdown for README files](#markdown-for-readme-files)
 - [Other sources](#other-sources)
 
@@ -560,6 +563,31 @@ and has its own section in every repository. A typical issue structure looks lik
   features or project phases (e.g. Weekly Sprint 9/5-9/16 or Shipping 1.0).
 - One **assignee** is responsible for working on the issue at any given time.
 - **Comments** allow anyone with access to the repository to provide feedback.
+
+## Wiki
+
+Every repository on GitHub comes with a wiki. After you’ve created a repository, you can set up the
+included wiki through the sidebar navigation. Starting your wiki is simply a matter of clicking
+the **Wiki** button and creating your first page.
+
+### Adding content
+
+Wiki content is designed to be easily editable. You can add or change content on any wiki page
+by clicking the **Edit** button located in the upper right corner of each page. This opens up the wiki editor.
+
+Wiki pages can be written in any format supported by GitHub Markup. Using the drop-down menu in the editor,
+you can select the format of your wiki, and then use wiki toolbar to create and include content on a page.
+Wikis also give you the option of including a custom footer where you can list things like contact details
+or license information for your project.
+
+GitHub keeps track of changes made to each page in your wiki. Below a page title, you can see who made
+the most recent edits, in addition to the number of commits made to the page. Clicking on this information
+will take you to the full page history where you can compare revisions or see a detailed list of edits over time.
+
+### Adding pages
+
+You can add additional pages to your wiki by selecting **New Page** in the upper right corner. By default,
+each page you create is included automatically in your wiki’s sidebar and listed in alphabetical order.
 
 # Markdown for README files
 
