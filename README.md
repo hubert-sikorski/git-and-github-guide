@@ -45,6 +45,7 @@
     - [Open a Pull Request](#open-a-pull-request)
     - [Discuss and review your code](#discuss-and-review-your-code)
     - [Merge](#merge)
+  - [Issues](#issues)
 - [Markdown for README files](#markdown-for-readme-files)
 - [Other sources](#other-sources)
 
@@ -52,7 +53,8 @@
 
 ## User configuration
 
-- `git config --global user.name '[firstname lastname]'` - Set a name for identification. Hint: You can use `-g` flag instead of `--global`
+- `git config --global user.name '[firstname lastname]'` - Set a name for identification.
+  Hint: You can use the `-g` flag instead of the `--global`
 
 - `git config -g user.email '[valid_email]'` - Set associated email address.
 
@@ -102,7 +104,7 @@
   apply it to the current branch.
 
 - `git clean -n` - Shows which untracked files would be removed from working directory.
-  Use the `-f` flag in place of the `-n` flag to execute the clean.
+  Replace the `-f` flag with the `-n` flag to execute the clean.
 
 ## Branches & Merging
 
@@ -129,9 +131,11 @@
 
 - `git push` - Transmit local branch commits to the remote repository branch.
 
-- `git push -u [remote_alias] [branch_name]` - Transmit local, non-master branch commits to the remote repository branch. `-u` stands for `--set-upstream`. You can also use `origin` instead of `[remote_alias]`.
+- `git push -u [remote_alias] [branch_name]` - Transmit local, non-master branch commits to the remote repository as a
+  new branch. `-u` stands for `--set-upstream`. You can also use `origin` instead of `[remote_alias]`.
 
-- `git push --force` - Overwrite remote repository with local working directory. :warning: Command not recommended for beginners.
+- `git push --force` - Overwrite remote repository with local working directory.
+:warning: Command not recommended for beginners.
 
 - `git pull` - Fetch and merge any commits from the tracking remote branch.
 
@@ -509,7 +513,7 @@ git push -u origin [branch_name]
 
 ### Open a Pull Request
 
-![GitHub flow](img/using-github/create-pr.gif)
+![Open Pull Request](img/using-github/create-pr.gif)
 
 *Note:* After pushing local branch to the remote repository you may see that a `Compare & Pull request` button
 has automatically appeared on its main page. You can use it instead of creating a Pull Request manually.
@@ -535,17 +539,31 @@ in the unified Pull Request view.
 
 ### Merge
 
-![Working tree](img/using-github/merge-branch.png)
+![Merge branch](img/using-github/merge-branch.png)
+
+![Delete branch](img/using-github/delete-branch.png)
 
 Once your changes have been verified, it is time to merge your code into the master branch.
 Once merged, Pull Requests preserve a record of the historical changes to your code. Because
 they're searchable, they let anyone go back in time to understand why and how a decision was made.
 
-![Working tree](img/using-github/delete-branch.png)
+## Issues
+
+Issues are a great way to keep track of tasks, enhancements, and bugs for your projects.
+They’re kind of like email—except they can be shared and discussed with the rest of your team.
+Most software projects have a bug tracker of some kind. GitHub’s tracker is called Issues,
+and has its own section in every repository. A typical issue structure looks like this:
+
+- A **title** and **description** describe what the issue is all about.
+- Color-coded **labels** help you categorize and filter your issues (just like labels in email).
+- A **milestone** acts like a container for issues. This is useful for associating issues with specific
+  features or project phases (e.g. Weekly Sprint 9/5-9/16 or Shipping 1.0).
+- One **assignee** is responsible for working on the issue at any given time.
+- **Comments** allow anyone with access to the repository to provide feedback.
 
 # Markdown for README files
 
 # Other sources
 
-- [Git](https://help.github.com/en/github/using-git)
-- [GitHub](https://help.github.com/en/github/using-git)
+- [https://help.github.com/en/github/using-git](https://help.github.com/en/github/using-git)
+- [https://help.github.com/en/github](https://help.github.com/en/github)
