@@ -50,6 +50,15 @@
     - [Adding content](#adding-content)
     - [Adding pages](#adding-pages)
 - [Markdown for README files](#markdown-for-readme-files)
+  - [Headings](#headings)
+  - [Styling text](#styling-text)
+  - [Lists](#lists)
+    - [Unordered list](#unordered-list)
+    - [Ordered list](#ordered-list)
+    - [Nested lists](#nested-lists)
+    - [Task lists](#task-lists)
+  - [Links](#links)
+  - [Images](#images)
 - [Other sources](#other-sources)
 
 # Git commands
@@ -592,6 +601,130 @@ You can add additional pages to your wiki by selecting **New Page** in the upper
 each page you create is included automatically in your wiki’s sidebar and listed in alphabetical order.
 
 # Markdown for README files
+
+GitHub combines a syntax for formatting text called **GitHub Flavored Markdown** with a few unique writing features.
+
+## Headings
+
+```markdown
+# H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+```
+
+- # H1
+
+- ## H2
+
+- ### H3
+
+- #### H4
+
+- ##### H5
+
+- ###### H6
+
+## Styling text
+
+| Style | Syntax | Keyboard shortcut | Example | Output |
+| :---: | :---: | :---: | :---: | :---: |
+| Bold | `** **` or `__ __` | cmd/ctrl + b | `**This is bold text**` | **This is bold text** |
+| Italic | `* *` or `_ _` | cmd/ctrl + i | `*This text is italicized*` | *This text is italicized* |
+| Strikethrough | `~~ ~~` | | `~~This was mistaken text~~` | ~~This was mistaken text~~ |
+| Bold and nested italic | `** **` and `_ _` | | `**This text is _extremely_ important**` | **This text is _extremely_ important** |
+| All bold and italic | `*** ***` | | `***All this text is important***` | ***All this text is important*** |
+
+## Lists
+
+### Unordered list
+
+```markdown
+- Donald Trump
+- Barack Obama
+- Teddy Roosevelt
+```
+
+- Donald Trump
+- Barack Obama
+- George Bush Jr.
+
+### Ordered list
+
+```markdown
+1. George Washington
+2. John Adams
+3. Thomas Jefferson
+```
+
+1. George Washington
+2. John Adams
+3. Thomas Jefferson
+
+### Nested lists
+
+```markdown
+1. First item
+    - Second item
+      - Third item
+```
+
+1. First item
+    - Second item
+      - Third item
+
+### Task lists
+
+```markdown
+- [x] Finish my changes
+- [ ] Push my commits to GitHub
+- [ ] Open a pull request
+- [ ] \(Optional) Open a followup issue
+```
+
+- [x] Finish my changes
+- [ ] Push my commits to GitHub
+- [ ] Open a pull request
+- [ ] \(Optional) Open a followup issue
+
+## Links
+
+```markdown
+[Link](https://www.google.com)
+
+[Link with title](https://www.google.com "Google's Homepage")
+
+URLs and URLs in angle brackets will automatically get turned into links.
+http://www.example.com or <http://www.example.com> and sometimes
+example.com (but not on Github).
+```
+
+[Link](https://www.google.com)
+
+[Link with title](https://www.google.com "Google's Homepage")
+
+URLs and URLs in angle brackets will automatically get turned into links.
+http://www.example.com or <http://www.example.com> and sometimes
+example.com (but not on Github).
+
+## Images
+
+```markdown
+Inline-style:
+![alt text](img/markdown-for-readme/github-octocat.png)
+
+![alt text](img/markdown-for-readme/github-octocat.png "Title")
+
+![alt text](https://csis.pace.edu/~scharff/pacemobilelab/images/github.jpg)
+```
+
+![alt text](img/markdown-for-readme/github-octocat.png)
+
+![alt text](img/markdown-for-readme/github-octocat.png "Title")
+
+![alt text](https://csis.pace.edu/~scharff/pacemobilelab/images/github.jpg)
 
 # Other sources
 
