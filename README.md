@@ -149,7 +149,9 @@
 
 - `git rebase [branch_name]` - Apply any commits of current branch ahead of specified one.
 
-- `git reset --hard [commit]` - Clear staging area, rewrite working tree from specified commit.
+- `git reset --hard [commit]` - Clear staging area, rewrite working tree from specified commit. Most often
+  used with `HEAD`, which points on the latest commit.
+  :warning: DANGEROUS: If `[commit]` is not specified Git will clear all of the working tree.
 
 - `git rm --cached [file]` - Stop tracking specified file.
 
