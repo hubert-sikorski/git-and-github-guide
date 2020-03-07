@@ -59,6 +59,11 @@
     - [Task lists](#task-lists)
   - [Links](#links)
   - [Images](#images)
+  - [Quotes](#quotes)
+  - [Horizontal Rule](#horizontal-rule)
+  - [Code and Syntax Highlighting](#code-and-syntax-highlighting)
+  - [Tables](#tables)
+  - [Emoji](#emoji)
 - [Other sources](#other-sources)
 
 # Git commands
@@ -697,8 +702,7 @@ GitHub combines a syntax for formatting text called **GitHub Flavored Markdown**
 [Link with title](https://www.google.com "Google's Homepage")
 
 URLs and URLs in angle brackets will automatically get turned into links.
-http://www.example.com or <http://www.example.com> and sometimes
-example.com (but not on Github).
+<http://www.example.com> and sometimes example.com (but not on Github).
 ```
 
 [Link](https://www.google.com)
@@ -706,8 +710,7 @@ example.com (but not on Github).
 [Link with title](https://www.google.com "Google's Homepage")
 
 URLs and URLs in angle brackets will automatically get turned into links.
-http://www.example.com or <http://www.example.com> and sometimes
-example.com (but not on Github).
+<http://www.example.com> and sometimes example.com (but not on Github).
 
 ## Images
 
@@ -725,6 +728,163 @@ Inline-style:
 ![alt text](img/markdown-for-readme/github-octocat.png "Title")
 
 ![alt text](https://csis.pace.edu/~scharff/pacemobilelab/images/github.jpg)
+
+## Quotes
+
+```markdown
+One great man said:
+
+> Preserve the Union
+
+Break
+
+> Blockquotes are very handy to emulate text.
+> This line is part of the same quote.
+```
+
+One great man said:
+
+> Preserve the Union
+
+Break
+
+> Blockquotes are very handy to emulate text.
+> This line is part of the same quote.
+
+## Horizontal Rule
+
+```markdown
+Three or more...
+
+---
+
+Hypens
+
+```
+
+Three or more...
+
+---
+
+Hyphens
+
+## Code and Syntax Highlighting
+
+You can call out code or a command within a sentence with single backticks (` `` `)
+The text within the backticks will not be formatted.
+
+```markdown
+Inline `code` has `back-ticks around` it.
+```
+
+Inline `code` has `back-ticks around` it.
+
+To format code or text into its own distinct block, use triple backticks (` ``` `)
+
+```none
+    ```
+    No language indicated, so no syntax highlighting.
+    But let's throw in a <b>tag</b>.
+    ```
+
+    ```javascript
+    const message = 'Hello world from JavaScript!';
+    console.log(message);
+    ```
+
+    ```python
+    message = "Hello world from Python!"
+    print message
+    ```
+```
+
+Output:
+
+```none
+No language indicated, so no syntax highlighting.
+But let's throw in a <b>tag</b>.
+```
+
+```javascript
+const message = 'Hello world from JavaScript!';
+console.log(message);
+```
+
+```python
+message = "Hello world from Python!"
+print message
+```
+
+You can find a full list of supported languages here: [CLICK](https://support.codebasehq.com/articles/tips-tricks/syntax-highlighting-in-markdown)
+
+## Tables
+
+```markdown
+Colons can be used to align columns.
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+There must be at least 3 dashes separating each header cell.
+The outer pipes (|) are optional, and you don't need to make the
+raw Markdown line up prettily. You can also use inline Markdown.
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
+
+You can also align columns:
+
+| Left-aligned | Center-aligned | Right-aligned |
+| :---         |     :---:      |          ---: |
+| git status   | git status     | git status    |
+| git diff     | git diff       | git diff      |
+```
+
+Colons can be used to align columns.
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+There must be at least 3 dashes separating each header cell.
+The outer pipes (|) are optional, and you don't need to make the
+raw Markdown line up prettily. You can also use inline Markdown.
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
+
+You can also align columns:
+
+| Left-aligned | Center-aligned | Right-aligned |
+| :---         |     :---:      |          ---: |
+| git status   | git status     | git status    |
+| git diff     | git diff       | git diff      |
+
+## Emoji
+
+You can add emoji to your writing by typing :EMOJICODE:
+
+Here are some examples:
+
+- :smiley: - `:smiley:`
+- :heart: - `:heart`
+- :trollface: - `:trollface:`
+- :warning: - `:warning:`
+- :x: - `:x:`
+- :heavy_check_mark: - `:heavy_check_mark:`
+- :zap: - `:zap:`
+- :ok_hand: - `:ok_hand:`
+
+You can find a full list of supported emojis here: [CLICK](https://gist.github.com/rxaviers/7360908)
 
 # Other sources
 
