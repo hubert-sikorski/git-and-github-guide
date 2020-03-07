@@ -1,6 +1,6 @@
 ![Git&GitHub](img/intro/git&github-guide.png)
 
-## Check out [Wiki page](https://github.com/princeelector/git-and-github-guide/wiki) for more condensed sources plus some theory
+## [Wiki page](https://github.com/princeelector/git-and-github-guide/wiki)
 
 ## Table of contents
 
@@ -62,6 +62,8 @@
   - [Quotes](#quotes)
   - [Horizontal Rule](#horizontal-rule)
   - [Code and Syntax Highlighting](#code-and-syntax-highlighting)
+    - [Inline code](#inline-code)
+    - [Code blocks](#code-blocks)
   - [Tables](#tables)
   - [Emoji](#emoji)
 - [Other sources](#other-sources)
@@ -620,6 +622,8 @@ GitHub combines a syntax for formatting text called **GitHub Flavored Markdown**
 ###### H6
 ```
 
+Output:
+
 - # H1
 
 - ## H2
@@ -652,9 +656,11 @@ GitHub combines a syntax for formatting text called **GitHub Flavored Markdown**
 - Teddy Roosevelt
 ```
 
+Output:
+
 - Donald Trump
 - Barack Obama
-- George Bush Jr.
+- Teddy Roosevelt
 
 ### Ordered list
 
@@ -663,6 +669,8 @@ GitHub combines a syntax for formatting text called **GitHub Flavored Markdown**
 2. John Adams
 3. Thomas Jefferson
 ```
+
+Output:
 
 1. George Washington
 2. John Adams
@@ -676,6 +684,8 @@ GitHub combines a syntax for formatting text called **GitHub Flavored Markdown**
       - Third item
 ```
 
+Output:
+
 1. First item
     - Second item
       - Third item
@@ -688,6 +698,8 @@ GitHub combines a syntax for formatting text called **GitHub Flavored Markdown**
 - [ ] Open a pull request
 - [ ] \(Optional) Open a followup issue
 ```
+
+Output:
 
 - [x] Finish my changes
 - [ ] Push my commits to GitHub
@@ -704,6 +716,8 @@ GitHub combines a syntax for formatting text called **GitHub Flavored Markdown**
 URLs and URLs in angle brackets will automatically get turned into links.
 <http://www.example.com> and sometimes example.com (but not on Github).
 ```
+
+Output:
 
 [Link](https://www.google.com)
 
@@ -723,6 +737,8 @@ Inline-style:
 ![alt text](https://csis.pace.edu/~scharff/pacemobilelab/images/github.jpg)
 ```
 
+Output:
+
 ![alt text](img/markdown-for-readme/github-octocat.png)
 
 ![alt text](img/markdown-for-readme/github-octocat.png "Title")
@@ -741,6 +757,8 @@ Break
 > Blockquotes are very handy to emulate text.
 > This line is part of the same quote.
 ```
+
+Output:
 
 One great man said:
 
@@ -762,6 +780,8 @@ Hypens
 
 ```
 
+Output:
+
 Three or more...
 
 ---
@@ -770,6 +790,8 @@ Hyphens
 
 ## Code and Syntax Highlighting
 
+### Inline code
+
 You can call out code or a command within a sentence with single backticks (` `` `)
 The text within the backticks will not be formatted.
 
@@ -777,7 +799,11 @@ The text within the backticks will not be formatted.
 Inline `code` has `back-ticks around` it.
 ```
 
+Output:
+
 Inline `code` has `back-ticks around` it.
+
+### Code blocks
 
 To format code or text into its own distinct block, use triple backticks (` ``` `)
 
@@ -837,6 +863,8 @@ Markdown | Less | Pretty
 *Still* | `renders` | **nicely**
 1 | 2 | 3
 ```
+
+Output:
 
 Colons can be used to align columns.
 
