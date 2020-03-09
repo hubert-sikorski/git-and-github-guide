@@ -246,7 +246,7 @@ it can be merged to the Master.
 
 ## Forking workflow
 
-[Forking](img/git-workflow/forking.png)
+![Forking](img/git-workflow/forking.png)
 
 In **open source** projects it is the owner of the repository who decides who can push to the repo.
 
@@ -586,7 +586,7 @@ and has its own section in every repository. A typical issue structure looks lik
 
 ## Wiki
 
-[Wiki](img/using-github/wiki.png)
+![Wiki](img/using-github/wiki.png)
 
 Every repository on GitHub comes with a wiki. After you’ve created a repository, you can set up the
 included wiki through the sidebar navigation. Starting your wiki is simply a matter of clicking
