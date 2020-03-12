@@ -910,5 +910,10 @@ You can find a full list of supported emojis here: [CLICK](https://gist.github.c
 
 # Other sources
 
-- [https://help.github.com/en/github/using-git](https://help.github.com/en/github/using-git)
-- [https://help.github.com/en/github](https://help.github.com/en/github)
+- [Git Documentation](https://git-scm.com/doc)
+- [Using Git](https://help.github.com/en/github/using-git)
+- [GitHub Documentation](https://help.github.com/en/github)
+- [Become a Git pro in just one blog.](https://itnext.io/become-a-git-pro-in-just-one-blog-a-thorough-guide-to-git-architecture-and-command-line-interface-93fbe9bdb395)
+- [The Ultimate GitHub Collaboration Guide](https://medium.com/@jonathanmines/the-ultimate-github-collaboration-guide-df816e98fb67)
+- [Advanced Git Tutorials](https://www.atlassian.com/git/tutorials/advanced-overview)
+- [GitHub Guides](https://guides.github.com)
