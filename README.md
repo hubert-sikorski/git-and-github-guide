@@ -21,7 +21,7 @@
   - [Gitflow](#gitflow)
   - [Forking workflow](#forking-workflow)
 - [Ignoring files](#ignoring-files)
-  - [Example of .gitignore file](#example-of-gitignore-file)
+  - [Example of a .gitignore file](#example-of-a-gitignore-file)
   - [Files to ignore](#files-to-ignore)
   - [How .gitignore works](#how-gitignore-works)
     - [Literal File Names](#literal-file-names)
@@ -287,7 +287,7 @@ add a rule to ignore it. From your terminal, **untrack** the file:
 git rm --cached [file]
 ```
 
-## Example of .gitignore file
+## Example of a .gitignore file
 
 ```bash
 # Ignore the node_modules directory
@@ -427,7 +427,7 @@ bug fixes, experiments, ideas…
 
 Whether our code will be seen by the entire dev team, open source community or just future versions of
 ourselves, either one will be grateful if we commit responsibly today. Time to forget about running
-`~~git commit -m 'Fix bug'~~` ever again.
+**~~git commit -m 'Fix bug'~~** ever again.
 
 ### Make clean, single-purpose commits
 
@@ -577,7 +577,7 @@ they're searchable, they let anyone go back in time to understand why and how a 
 ![Issues](img/using-github/issues.png)
 
 Issues are a great way to keep track of tasks, enhancements, and bugs for your projects.
-They’re kind of like email—except they can be shared and discussed with the rest of your team.
+They’re kind of like email, except they can be shared and discussed with the rest of your team.
 Most software projects have a bug tracker of some kind. GitHub’s tracker is called Issues,
 and has its own section in every repository. A typical issue structure looks like this:
 
@@ -630,7 +630,7 @@ GitHub combines a syntax for formatting text called **GitHub Flavored Markdown**
 ###### H6
 ```
 
-Output:
+**Output**:
 
 - # H1
 
@@ -664,7 +664,7 @@ Output:
 - Teddy Roosevelt
 ```
 
-Output:
+**Output**:
 
 - Donald Trump
 - Barack Obama
@@ -678,7 +678,7 @@ Output:
 3. Thomas Jefferson
 ```
 
-Output:
+**Output**:
 
 1. George Washington
 2. John Adams
@@ -692,7 +692,7 @@ Output:
       - Third item
 ```
 
-Output:
+**Output**:
 
 1. First item
     - Second item
@@ -707,7 +707,7 @@ Output:
 - [ ] \(Optional) Open a followup issue
 ```
 
-Output:
+**Output**:
 
 - [x] Finish my changes
 - [ ] Push my commits to GitHub
@@ -725,7 +725,7 @@ URLs and URLs in angle brackets will automatically get turned into links.
 <http://www.example.com> and sometimes example.com (but not on Github).
 ```
 
-Output:
+**Output**:
 
 [Link](https://www.google.com)
 
@@ -745,7 +745,7 @@ Inline-style:
 ![alt text](https://csis.pace.edu/~scharff/pacemobilelab/images/github.jpg)
 ```
 
-Output:
+**Output**:
 
 ![alt text](img/markdown-for-readme/github-octocat.png)
 
@@ -766,7 +766,7 @@ Break
 > This line is part of the same quote.
 ```
 
-Output:
+**Output**:
 
 One great man said:
 
@@ -788,7 +788,7 @@ Hypens
 
 ```
 
-Output:
+**Output**:
 
 Three or more...
 
@@ -807,7 +807,7 @@ The text within the backticks will not be formatted.
 Inline `code` has `back-ticks around` it.
 ```
 
-Output:
+**Output**:
 
 Inline `code` has `back-ticks around` it.
 
@@ -832,7 +832,7 @@ To format code or text into its own distinct block, use triple backticks (` ``` 
     ```
 ```
 
-Output:
+**Output**:
 
 ```none
 No language indicated, so no syntax highlighting.
@@ -872,7 +872,7 @@ Markdown | Less | Pretty
 1 | 2 | 3
 ```
 
-Output:
+**Output**:
 
 Colons can be used to align columns.
 
@@ -883,8 +883,8 @@ Colons can be used to align columns.
 | zebra stripes | are neat      |    $1 |
 
 There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don't need to make the
-raw Markdown line up prettily. You can also use inline Markdown.
+The outer pipes ( | ) are optional, and you don't need to make the
+raw **Markdown** line up prettily. You can also use inline Markdown.
 
 Markdown | Less | Pretty
 --- | --- | ---
@@ -895,7 +895,7 @@ Markdown | Less | Pretty
 
 You can add emoji to your writing by typing :EMOJICODE:
 
-Here are some examples:
+Examples:
 
 - :smiley: - `:smiley:`
 - :heart: - `:heart`
@@ -906,7 +906,7 @@ Here are some examples:
 - :zap: - `:zap:`
 - :ok_hand: - `:ok_hand:`
 
-You can find a full list of supported emojis here: [CLICK](https://gist.github.com/rxaviers/7360908)
+You can find a full list of supported emoji's here: [CLICK](https://gist.github.com/rxaviers/7360908)
 
 # Other sources
 
