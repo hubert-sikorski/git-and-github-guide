@@ -572,6 +572,8 @@ they're searchable, they let anyone go back in time to understand why and how a 
 
 ## Issues
 
+![Issues](img/using-github/issues.png)
+
 Issues are a great way to keep track of tasks, enhancements, and bugs for your projects.
 They’re kind of like email—except they can be shared and discussed with the rest of your team.
 Most software projects have a bug tracker of some kind. GitHub’s tracker is called Issues,
