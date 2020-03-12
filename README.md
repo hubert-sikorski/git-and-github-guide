@@ -191,7 +191,7 @@
 
 The most popular workflow among entry-level developers and in small projects.
 
-The idea is simple: there is one central repository. Developers clones the repo, works
+The idea is simple: there is one central repository. Developer clones the repo, works
 locally on the code, makes a commit with changes, and pushes it to the central repository
 for other developers to pull and use in their work.
 
@@ -267,7 +267,7 @@ a fork of the repo is made, and instead of doing a merge request you create a pu
 # Ignoring files
 
 When you make commits in a git repository, you choose which files to stage and commit by
-using git add FILENAME and then `git commit`. But what if there are some files that you never
+using `git add [file]` and then `git commit`. But what if there are some files that you never
 want to commit? It's too easy to accidentally commit them (especially if you use `git add .`
 to stage all files in the current directory). That's where a **.gitignore** file comes in handy.
 It lets Git know that it should ignore certain files and not track them.
@@ -278,11 +278,13 @@ Create a **.gitignore** file for your repository:
 touch .gitignore
 ```
 
+- `touch` - Command used to create files. To create a directory use `mkdir [directory_name]`
+
 If you want to ignore a file that is already checked in, you must **untrack** the file before you
 add a rule to ignore it. From your terminal, **untrack** the file:
 
 ```console
-git rm --cached FILENAME
+git rm --cached [file]
 ```
 
 ## Example of .gitignore file
@@ -407,7 +409,7 @@ The commit command does not save changes in remote servers, only in the local re
 
 ## Use Branches
 
-**Branching** is one of Git’s most powerful features – and this is not by accident: quick and easy branching
+**Branching** is one of Git’s most powerful features and this is not by accident: quick and easy branching
 was a central requirement from day one. Branches are the perfect tool to help you avoid mixing up different
 lines of development. You should use branches extensively in your development workflows: for new features,
 bug fixes, experiments, ideas…
@@ -418,14 +420,14 @@ bug fixes, experiments, ideas…
 
 - You make changes to a file in the **working directory**.
 - You use the `git add` command to move those changes from the working directory to the **staging area**.
-- Git does not save changes yet. You need to run the `git commit` command to move changes from thestaging area to the **local repository**
+- Git does not save changes yet. You need to run the `git commit` command to move changes from the staging area to the **local repository**
 - Local repository is updated, but if you want to update your **remote repository**, you need to `git push` it
 
 ## Committing best practices
 
 Whether our code will be seen by the entire dev team, open source community or just future versions of
 ourselves, either one will be grateful if we commit responsibly today. Time to forget about running
-**~~git commit -m 'Fix bug'~~** ever again.
+`~~git commit -m 'Fix bug'~~` ever again.
 
 ### Make clean, single-purpose commits
 
@@ -434,14 +436,14 @@ By doing that you are creating an **organized log of commits**, which makes it e
 to read and maintain the code base. It is a good practice to push code more often and not end up with
 a messy repo. Make small commits more frequently and avoid committing large chunks of code.
 This makes it easy to glance through the commit history and find what you are looking for.
-It is recommended that the use of git add . and git add -A should be in moderation and instead
+It is recommended that the use of `git add .` and `git add -A` should be in moderation and instead
 the focus should be on making **frequent, but meaningful commits**. On the other hand, commits which introduce
 super small changes such as fixing typos in commit messages should be fixed with commands like
 `git commit --amend` and not made into separate commit.
 
 ### Write good commit messages
 
-Your commit log should tell a story. Therefore, Writing descriptive commit messages keeps your
+Your commit log should tell a **story**. Therefore, Writing descriptive commit messages keeps your
 repository well managed and makes it easy to navigate through your commit log. Your commit message
 should be short, in present tense and explicitly say why you made the change.
 
@@ -546,7 +548,7 @@ Git repository, anyone can see exactly what changes would be merged if they acce
 
 You can open a Pull Request at any point during the development process: when you have little or no code but
 want to share some screenshots or general ideas, when you're stuck and need help or advice, or when you're ready
-for someone to review your work. By using GitHub's @mention system in your Pull Request message, you can ask
+for someone to review your work. By using GitHub's `@mention` system in your Pull Request message, you can ask
 for feedback from specific people or teams, whether they're down the hall or ten time zones away.
 
 ### Discuss and review your code
@@ -717,7 +719,7 @@ Output:
 ```markdown
 [Link](https://www.google.com)
 
-[Link with title](https://www.google.com "Google's Homepage")
+[Link with a title](https://www.google.com "Google's Homepage")
 
 URLs and URLs in angle brackets will automatically get turned into links.
 <http://www.example.com> and sometimes example.com (but not on Github).
@@ -727,7 +729,7 @@ Output:
 
 [Link](https://www.google.com)
 
-[Link with title](https://www.google.com "Google's Homepage")
+[Link with a title](https://www.google.com "Google's Homepage")
 
 URLs and URLs in angle brackets will automatically get turned into links.
 <http://www.example.com> and sometimes example.com (but not on Github).
@@ -760,7 +762,7 @@ One great man said:
 
 Break
 
-> Blockquotes are very handy to emulate text.
+> Blockquotes are very handy to cite sources or some person's words.
 > This line is part of the same quote.
 ```
 
@@ -772,7 +774,7 @@ One great man said:
 
 Break
 
-> Blockquotes are very handy to emulate text.
+> Blockquotes are very handy to cite sources or some person's words.
 > This line is part of the same quote.
 
 ## Horizontal Rule
