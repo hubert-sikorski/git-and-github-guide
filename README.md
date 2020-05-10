@@ -20,6 +20,7 @@
     - [Feature Branch and Merge/Pull requests](#feature-branch-and-mergepull-requests)
   - [Gitflow](#gitflow)
   - [Forking workflow](#forking-workflow)
+    - [How to update forked repo](#how-to-update-forked-repo)
 - [Ignoring files](#ignoring-files)
   - [Example of a .gitignore file](#example-of-a-gitignore-file)
   - [Files to ignore](#files-to-ignore)
@@ -263,6 +264,32 @@ them to his project.
 
 At its core forking is similar to feature branching, but instead of creating branches
 a fork of the repo is made, and instead of doing a merge request you create a pull request.
+
+### How to update forked repo
+
+- **Step 1:** Add the remote (original repo that you forked) and call it “upstream”
+
+```bash
+git remote add upstream https://github.com/original-repo/goes-here.git
+```
+
+- **Step 2:** Fetch all branches of remote upstream
+
+```bash
+git fetch upstream
+```
+
+- **Step 3:** Rewrite your master with upstreams's maste rusing git rebase
+
+```bash
+git rebase upstream/master
+```
+
+- **Step 4:** Push your updates to master. Yo may need to force push witch `--force`
+
+```bash
+git push origin master --force
+```
 
 # Ignoring files
 
