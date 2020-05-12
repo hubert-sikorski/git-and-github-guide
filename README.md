@@ -105,7 +105,7 @@ their local repository.
 
 ## Creating a remote repository
 
-Just as with a local repository, you can create a remote repository that will be hosted GitHub.
+Just as with a local repository, you can create a remote repository that will be hosted by GitHub.
 Having a remote repository lets you show off your work to other people and even invite other developers
 to collaborate on an interesting project.
 
@@ -122,11 +122,9 @@ your repositories:
 
 Examples:
 
-```bash
-mybrandnewrepository :x: # avoid concatenating couple words into one
-myBrandNewRepository :x: # camelCase is not a good use case for naming repositories
-my-brand-new-repository :heavy_check_mark: # kebab-case is clear and readable
-```
+- mybrandnewrepository :x: - Avoid concatenating couple words into one
+- myBrandNewRepository :x: - camelCase is not a good use case for naming repositories
+- my-brand-new-repository :heavy_check_mark: - kebab-case is clear and readable
 
 ### Other options
 
