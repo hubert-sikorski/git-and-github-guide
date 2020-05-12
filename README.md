@@ -4,6 +4,9 @@
 
 ## Table of contents
 
+- [Create a repository](#create-a-repository)
+  - [Creating a local repo](#creating-a-local-repo)
+  - [Cloning an existing repository](#cloning-an-existing-repository)
 - [Git commands](#git-commands)
   - [User configuration](#user-configuration)
   - [Repository setup](#repository-setup)
@@ -72,6 +75,29 @@
   - [Tables](#tables)
   - [Emoji](#emoji)
 - [Other sources](#other-sources)
+
+# Create a repository
+
+A Git repository is a virtual storage of your project. It allows you to save versions of your code,
+which you can access when needed. There are two types of Git repositories: **remote** and **local**.
+
+- A **remote repository** is hosted on a remote, or off-site, server that is shared among multiple team members.
+- A **local repository** is hosted on a local machine for an individual user.
+
+![Repository types](img/create-a-repository/repository-types.png)
+
+## Creating a local repo
+
+To create a new repo, you'll use the `git init` command. `git init` is a one-time command you use during
+the initial setup of a new repo. Executing this command will create a new *.git* subdirectory in your
+current working directory. This will also create a new master branch.
+
+## Cloning an existing repository
+
+If a project has already been set up on a remote repository, the `git clone [url]` command is the most
+common way for users to obtain a local development clone. Like `git init`, cloning is generally a one-time
+operation. Once a developer has obtained a working copy, all version control operations are managed through
+their local repository.
 
 # Git commands
 
