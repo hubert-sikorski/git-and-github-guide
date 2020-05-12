@@ -465,7 +465,7 @@ bug fixes, experiments, ideas…
 
 Whether our code will be seen by the entire dev team, open source community or just future versions of
 ourselves, either one will be grateful if we commit responsibly today. Time to forget about running
-`**~~git commit -m 'Fix bug'~~**` ever again.
+**~~`git commit -m 'Fix bug'`~~** ever again.
 
 ### Make clean, single-purpose commits
 
@@ -826,7 +826,7 @@ Another break
 
 > Blockquotes are very handy to cite sources or some person's words.
 >
-> This line is part of the same quote, but it's in the same line as the previous sentence.
+> This line is part of the same quote, but it's not in the same line as the previous sentence.
 
 ## Horizontal Rule
 
