@@ -5,8 +5,11 @@
 ## Table of contents
 
 - [Create a repository](#create-a-repository)
-  - [Creating a local repo](#creating-a-local-repo)
+  - [Creating a local repository](#creating-a-local-repository)
   - [Cloning an existing repository](#cloning-an-existing-repository)
+  - [Creating a remote repository](#creating-a-remote-repository)
+    - [Pick a name for your repository](#pick-a-name-for-your-repository)
+    - [Other options](#other-options)
 - [Git commands](#git-commands)
   - [User configuration](#user-configuration)
   - [Repository setup](#repository-setup)
@@ -86,7 +89,7 @@ which you can access when needed. There are two types of Git repositories: **rem
 
 ![Repository types](img/create-a-repository/repository-types.png)
 
-## Creating a local repo
+## Creating a local repository
 
 To create a new repo, you'll use the `git init` command. `git init` is a one-time command you use during
 the initial setup of a new repo. Executing this command will create a new *.git* subdirectory in your
@@ -98,6 +101,35 @@ If a project has already been set up on a remote repository, the `git clone [url
 common way for users to obtain a local development clone. Like `git init`, cloning is generally a one-time
 operation. Once a developer has obtained a working copy, all version control operations are managed through
 their local repository.
+
+## Creating a remote repository
+
+Just as with a local repository, you can create a remote repository that will be hosted GitHub.
+Having a remote repository lets you show off your work to other people and even invite other developers
+to collaborate on an interesting project.
+
+### Pick a name for your repository
+
+While naming a GitHub repo you want a name that is brief, descriptive and readable. Although there is no wrong
+way to name a repo, some names are better than others. The following rules are considered best practices while naming
+your repositories:
+
+1. Use lower case.
+2. Use dashes `-` (kebab-case).
+3. Be specific. You may find you have to differentiate between similar ideas later.
+4. Be consistent.
+
+Examples:
+
+```bash
+mybrandnewrepository :x: # avoid concatenating couple words into one
+myBrandNewRepository :x: # camelCase is not a good use case for naming repositories
+my-brand-new-repository :heavy_check_mark: # kebab-case is clear and readable
+```
+
+### Other options
+
+![Other options](img/create-a-repository/create-repository-public-private.png)
 
 # Git commands
 
