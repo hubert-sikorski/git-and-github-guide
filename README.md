@@ -26,10 +26,6 @@
   - [Gitflow](#gitflow)
   - [Forking workflow](#forking-workflow)
     - [How to update a forked repo](#how-to-update-a-forked-repo)
-      - [**Step 1**](#step-1)
-      - [**Step 2**](#step-2)
-      - [**Step 3**](#step-3)
-      - [**Step 4**](#step-4)
 - [Ignoring files](#ignoring-files)
   - [Example of a .gitignore file](#example-of-a-gitignore-file)
   - [Files to ignore](#files-to-ignore)
@@ -345,15 +341,11 @@ a fork of the repo is made, and instead of doing a merge request you create a pu
 
 ### How to update a forked repo
 
-#### **Step 1**
-
 Add the remote (original repo that you forked) and call it “upstream”
 
 ```console
 git remote add upstream https://github.com/original-repo/goes-here.git
 ```
-
-#### **Step 2**
 
 Fetch all branches of remote upstream
 
@@ -361,15 +353,11 @@ Fetch all branches of remote upstream
 git fetch upstream
 ```
 
-#### **Step 3**
-
 Rewrite your master with upstreams's maste rusing git rebase
 
 ```console
 git rebase upstream/master
 ```
-
-#### **Step 4**
 
 Push your updates to master. Yo may need to force push witch `--force`
 
