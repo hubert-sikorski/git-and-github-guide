@@ -353,13 +353,13 @@ Fetch all branches of remote upstream
 git fetch upstream
 ```
 
-Rewrite your master with upstreams's maste rusing git rebase
+Rewrite your master with upstream's master using git rebase
 
 ```console
 git rebase upstream/master
 ```
 
-Push your updates to master. Yo may need to force push witch `--force`
+Push your updates to master. You may need to force push with `--force` flag
 
 ```console
 git push origin master --force
