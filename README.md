@@ -21,10 +21,10 @@
   - [Gitflow](#gitflow)
   - [Forking workflow](#forking-workflow)
     - [How to update a forked repo](#how-to-update-a-forked-repo)
-      - [**Step 1:**](#step-1)
-      - [**Step 2:**](#step-2)
-      - [**Step 3:**](#step-3)
-      - [**Step 4:**](#step-4)
+      - [**Step 1**](#step-1)
+      - [**Step 2**](#step-2)
+      - [**Step 3**](#step-3)
+      - [**Step 4**](#step-4)
 - [Ignoring files](#ignoring-files)
   - [Example of a .gitignore file](#example-of-a-gitignore-file)
   - [Files to ignore](#files-to-ignore)
@@ -241,8 +241,8 @@ Usually, you don’t run such tests on branches where features are developed.
 
 This can be resolved with Gitflow, which employs two parallel long-running branches:
 
-- Master
-- Develop
+- **Master**
+- **Develop**
 
 **“Master”** is always ready to be released on LIVE, with everything fully tested and approved
 (production-ready). **“Develop”** is the branch to which all feature branches are merged and
@@ -271,7 +271,7 @@ a fork of the repo is made, and instead of doing a merge request you create a pu
 
 ### How to update a forked repo
 
-#### **Step 1:**
+#### **Step 1**
 
 Add the remote (original repo that you forked) and call it “upstream”
 
@@ -279,7 +279,7 @@ Add the remote (original repo that you forked) and call it “upstream”
 git remote add upstream https://github.com/original-repo/goes-here.git
 ```
 
-#### **Step 2:**
+#### **Step 2**
 
 Fetch all branches of remote upstream
 
@@ -287,7 +287,7 @@ Fetch all branches of remote upstream
 git fetch upstream
 ```
 
-#### **Step 3:**
+#### **Step 3**
 
 Rewrite your master with upstreams's maste rusing git rebase
 
@@ -295,7 +295,7 @@ Rewrite your master with upstreams's maste rusing git rebase
 git rebase upstream/master
 ```
 
-#### **Step 4:**
+#### **Step 4**
 
 Push your updates to master. Yo may need to force push witch `--force`
 
@@ -306,7 +306,7 @@ git push origin master --force
 # Ignoring files
 
 When you make commits in a git repository, you choose which files to stage and commit by
-using `git add [file]` and then `git commit`. But what if there are some files that you never
+using `git add [file]` and `git commit`. But what if there are some files that you never
 want to commit? It's too easy to accidentally commit them (especially if you use `git add .`
 to stage all files in the current directory). That's where a **.gitignore** file comes in handy.
 It lets Git know that it should ignore certain files and not track them.
@@ -317,7 +317,7 @@ Create a **.gitignore** file for your repository:
 touch .gitignore
 ```
 
-- `touch` - Command used to create files. To create a directory use `mkdir [directory_name]`
+`touch` - Command used to create files. To create a directory use `mkdir [directory_name]`
 
 If you want to ignore a file that is already checked in, you must **untrack** the file before you
 add a rule to ignore it. From your terminal, **untrack** the file:
@@ -499,14 +499,15 @@ imperative style and sometimes it can even be a bit awkward. In his article “H
 Chris Beams explains how to easily apply the imperative style:
 
 > “A properly formed Git commit subject line should always be able to complete the following sentence:
-> If applied, this commit will your subject line here ”
+>
+> **If applied, this commit will** (your subject line here) ”
 
 If we apply this rule to the bad examples mentioned above, the result will look like this:
 
 - If applied, this commit will -> "fix an X bug to enable Y" :heavy_check_mark:
-- if applied, this commit will -> "remove X method in Y" :heavy_check_mark:
+- if applied, this commit will -> "remove an X method in Y" :heavy_check_mark:
 - if applied, this commit will -> "refactor markup for X" :heavy_check_mark:
-- if applied, this commit will -> "update content in X section/s" :heavy_check_mark:
+- if applied, this commit will -> "update content in X component" :heavy_check_mark:
 
 The most important part of a commit message is that it should be clear and meaningful.
 In the long run, writing good commit messages shows how much of a collaborator you are.
@@ -803,6 +804,10 @@ Break
 
 > Blockquotes are very handy to cite sources or some person's words.
 > This line is part of the same quote.
+
+> Blockquotes are very handy to cite sources or some person's words.
+>
+> This line is part of the same quote, but it's in the same line as the previous sentence.
 ```
 
 **Output**:
@@ -902,7 +907,7 @@ Colons can be used to align columns.
 | zebra stripes | are neat      |    $1 |
 
 There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don't need to make the
+The outer pipes (`|`) are optional, and you don't need to make the
 raw Markdown line up prettily. You can also use inline Markdown.
 
 Markdown | Less | Pretty
@@ -932,7 +937,7 @@ Markdown | Less | Pretty
 
 ## Emoji
 
-You can add emoji to your writing by typing :EMOJICODE:
+You can add emoji to your writing by typing `:EMOJICODE:`
 
 Examples:
 
