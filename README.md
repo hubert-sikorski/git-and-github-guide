@@ -10,6 +10,7 @@
   - [Creating a remote repository](#creating-a-remote-repository)
     - [Pick a name for your repository](#pick-a-name-for-your-repository)
     - [Other options](#other-options)
+    - [Connect a local repository to a remote repository](#connect-a-local-repository-to-a-remote-repository)
 - [Git commands](#git-commands)
   - [User configuration](#user-configuration)
   - [Repository setup](#repository-setup)
@@ -129,7 +130,27 @@ my-brand-new-repository :heavy_check_mark: # kebab-case is clear and readable
 
 ### Other options
 
+There are a number of optional items you can pre-populate your repository with. You can change any of them
+even after your repository has been created. Having a README and LICENCE files is considered a good practice,
+but you can create them later as well. You also can choose to make your repository public or private. If you're
+using GitHub Free for a user account or organization and change a repository's visibility from public to private,
+you'll lose access to many features like protected branches or GitHub Pages.
+
 ![Other options](img/create-a-repository/create-repository-public-private.png)
+
+### Connect a local repository to a remote repository
+
+In the Command prompt, add the URL for the remote repository where your local repository will be pushed.
+
+`git remote add origin [remote_repository_URL]`
+
+See [Git commands](#git-commands) below for a detailed list of all Git commands.
+
+```bash
+git remote add origin [remote_repository_URL] # sets the new remote
+git remote -v # verifies the new remote URL
+git push -u origin master # pushes the changes in your local repository up to the remote repository
+```
 
 # Git commands
 
