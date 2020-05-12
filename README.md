@@ -261,7 +261,6 @@ to anyone who’d like to change or improve its code.
 
 This problem is solved by forks: any time a developer wants to change something in
 an open source project, they don’t clone the official repo directly. Instead, they
-
 **Fork** it to create a copy. When the work is finished, they make a pull request so
 that the owner of the repository can review the changes and decide whether to merge
 them to his project.
@@ -466,7 +465,7 @@ bug fixes, experiments, ideas…
 
 Whether our code will be seen by the entire dev team, open source community or just future versions of
 ourselves, either one will be grateful if we commit responsibly today. Time to forget about running
-**~~git commit -m 'Fix bug'~~** ever again.
+`**~~git commit -m 'Fix bug'~~**` ever again.
 
 ### Make clean, single-purpose commits
 
@@ -498,9 +497,9 @@ applying the commit will do**, rather than what you did. It may feel awkward at 
 imperative style and sometimes it can even be a bit awkward. In his article “How to Write a Git Commit Message”,
 Chris Beams explains how to easily apply the imperative style:
 
-> “A properly formed Git commit subject line should always be able to complete the following sentence:
+> A properly formed Git commit subject line should always be able to complete the following sentence:
 >
-> **If applied, this commit will** (your subject line here) ”
+> "**If applied, this commit will** (your subject line here)"
 
 If we apply this rule to the bad examples mentioned above, the result will look like this:
 
@@ -805,6 +804,8 @@ Break
 > Blockquotes are very handy to cite sources or some person's words.
 > This line is part of the same quote.
 
+Another break
+
 > Blockquotes are very handy to cite sources or some person's words.
 >
 > This line is part of the same quote, but it's in the same line as the previous sentence.
@@ -820,6 +821,12 @@ Break
 
 > Blockquotes are very handy to cite sources or some person's words.
 > This line is part of the same quote.
+
+Another break
+
+> Blockquotes are very handy to cite sources or some person's words.
+>
+> This line is part of the same quote, but it's in the same line as the previous sentence.
 
 ## Horizontal Rule
 
