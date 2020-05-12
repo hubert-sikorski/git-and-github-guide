@@ -1,7 +1,5 @@
 ![Git&GitHub](img/intro/git&github-guide.png)
 
-## [Wiki page](https://github.com/princeelector/git-and-github-guide/wiki)
-
 ## Table of contents
 
 - [Create a repository](#create-a-repository)
