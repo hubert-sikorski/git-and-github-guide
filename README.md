@@ -212,6 +212,8 @@ git push -u origin master # pushes the changes in your local repository up to th
 
 - `git branch -d [branch_name]` - Delete a branch.
 
+- `git branch -m [new_branch_name]` - Rename current branch with name specified after `-m` flag
+
 - `git merge [branch_name]` - Merge the specified branch's history into the current one.
 
 - `git log` - Show all commits in the current branch's history.
