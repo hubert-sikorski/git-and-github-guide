@@ -226,6 +226,8 @@ git push -u origin master # pushes the changes in your local repository up to th
 
 - `git merge [remote_alias]/[branch_name]` - Merge a remote branch into your current branch to bring it up to date.
 
+- `git merge --abort` - Aborts merging process.
+
 - `git push` - Transmit local branch commits to the remote repository branch.
 
 - `git push -u [remote_alias] [branch_name]` - Transmit local, non-master branch commits to the remote repository as a
