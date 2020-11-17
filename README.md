@@ -11,6 +11,7 @@
     - [Connect a local repository to a remote repository](#connect-a-local-repository-to-a-remote-repository)
 - [Git commands](#git-commands)
   - [User configuration](#user-configuration)
+  - [Aliases](#aliases)
   - [Repository setup](#repository-setup)
   - [Inspect & Compare](#inspect--compare)
   - [Tracking path changes](#tracking-path-changes)
@@ -155,6 +156,16 @@ git push -u origin master # pushes the changes in your local repository up to th
 
 - `git config -g color.ui auto` - Set automatic command line coloring for Git for easy reviewing.
 
+## Aliases
+
+- `git config --global alias.[alias_name] '[command_to_alias]'` - Set an alias for specified command. It is then invoked by `git [alias_name]`
+
+- `alias [alias_name]='[command_to_alias]'` - Simplified alias setting. Alias is then invoked by simply typing `[alias_name]`
+
+- `git config --get-regexp ^alias\.` - Get a list of all saved aliases.
+
+- `git config --global --unset alias.[alias_name]` - Delete saved alias.
+
 ## Repository setup
 
 - `git init` - Initialize an existing directory as a Git repository.
@@ -211,6 +222,8 @@ git push -u origin master # pushes the changes in your local repository up to th
   Use `-b` flag to create and check out a new branch.
 
 - `git branch -d [branch_name]` - Delete a branch.
+
+- `git branch | grep -v 'master' | xargs git branch -D` - Delete all branches except the master branch.
 
 - `git branch -m [new_branch_name]` - Rename current branch with name specified after `-m` flag
 
